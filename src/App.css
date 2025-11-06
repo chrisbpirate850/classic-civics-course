@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+
+    /* Brand Colors */
+    --ink-blue: 220 69% 20%;
+    --liberty-gold: 46 87% 65%;
+    --patriot-red: 2 74% 58%;
+    --garden-green: 140 65% 42%;
+    --parchment: 45 23% 97%;
+
+    /* Theme Variables - Light Mode */
+    --background: 45 23% 97%; /* parchment */
+    --foreground: 220 69% 20%; /* ink-blue */
+    --card: 0 0% 100%; /* white for cards */
+    --card-foreground: 220 69% 20%; /* ink-blue */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 69% 20%;
+    --primary: 220 69% 20%; /* ink-blue */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 46 87% 65%; /* liberty-gold */
+    --secondary-foreground: 220 69% 20%; /* ink-blue */
+    --muted: 45 23% 92%;
+    --muted-foreground: 220 20% 40%;
+    --accent: 2 74% 58%; /* patriot-red */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 85%;
+    --input: 220 13% 85%;
+    --ring: 220 69% 20%; /* ink-blue */
+
+    /* Sidebar */
+    --sidebar: 220 69% 20%; /* ink-blue */
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 46 87% 65%; /* liberty-gold */
+    --sidebar-primary-foreground: 220 69% 20%;
+    --sidebar-accent: 2 74% 58%; /* patriot-red */
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 13% 85%;
+    --sidebar-ring: 46 87% 65%;
+  }
+
+  .dark {
+    /* Dark Mode */
+    --background: 220 30% 12%;
+    --foreground: 45 23% 97%; /* parchment */
+    --card: 220 25% 16%;
+    --card-foreground: 45 23% 97%;
+    --popover: 220 25% 16%;
+    --popover-foreground: 45 23% 97%;
+    --primary: 46 87% 65%; /* liberty-gold */
+    --primary-foreground: 220 69% 20%;
+    --secondary: 220 25% 20%;
+    --secondary-foreground: 46 87% 65%;
+    --muted: 220 25% 20%;
+    --muted-foreground: 45 23% 70%;
+    --accent: 2 74% 58%; /* patriot-red */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 25% 25%;
+    --input: 220 25% 25%;
+    --ring: 46 87% 65%;
+
+    /* Sidebar - Dark */
+    --sidebar: 220 30% 10%;
+    --sidebar-foreground: 45 23% 97%;
+    --sidebar-primary: 46 87% 65%;
+    --sidebar-primary-foreground: 220 69% 20%;
+    --sidebar-accent: 2 74% 58%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 25% 25%;
+    --sidebar-ring: 46 87% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom gradient utilities */
+@layer utilities {
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(2, 74%, 58%) 0%, hsl(220, 69%, 20%) 100%);
+  }
+
+  .gradient-patriot {
+    background: linear-gradient(135deg, hsl(2, 74%, 58%) 0%, hsl(2, 74%, 48%) 100%);
+  }
+
+  .gradient-garden {
+    background: linear-gradient(135deg, hsl(140, 65%, 42%) 0%, hsl(140, 65%, 32%) 100%);
+  }
+
+  .shadow-warm {
+    box-shadow: 0 4px 6px -1px rgba(234, 179, 8, 0.3), 0 2px 4px -1px rgba(234, 179, 8, 0.2);
+  }
+
+  .shadow-noble {
+    box-shadow: 0 10px 15px -3px rgba(30, 58, 138, 0.3), 0 4px 6px -2px rgba(30, 58, 138, 0.2);
+  }
+}
