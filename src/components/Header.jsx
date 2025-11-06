@@ -18,11 +18,15 @@ export default function Header({ onMenuClick, darkMode, onDarkModeToggle }) {
               <Menu className="h-6 w-6" />
             </Button>
             
-            <Link to="/" className="flex items-center space-x-2">
-              <BookOpen className="h-8 w-8" />
+            <Link to="/" className="flex items-center space-x-3">
+              <img
+                src="/images/lpm-logo.png"
+                alt="Liberty's Principles Media Logo"
+                className="h-12 w-12 rounded-lg"
+              />
               <div>
-                <h1 className="text-xl font-bold">U.S. Civics Education</h1>
-                <p className="text-sm opacity-90">American Government Guide</p>
+                <h1 className="text-xl font-bold">Classic U.S. Civics</h1>
+                <p className="text-sm opacity-90">Liberty's Principles Media</p>
               </div>
             </Link>
           </div>
